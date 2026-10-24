@@ -1,0 +1,49 @@
+# Execução ANTES das correções (2026-10-24) — npm test
+
+ℹ tests 72
+ℹ pass 69
+ℹ fail 3
+
+✖ failing tests:
+
+test at tests\integracao\02-erros.test.js:125:3
+✖ ERR-11: 404 na reserva do 2º item (corrida) → 422 e compensa R1 (34.0085ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  502 !== 422
+  
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 502,
+    expected: 422,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\integracao\03-contrato-dados.test.js:28:7
+✖ CT-06 [contrato] Armadilha de arredondamento: 1.005 x 1 (half-up) (8.8717ms)
+  AssertionError [ERR_ASSERTION]: total
+  
+  1 !== 1.01
+  
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 1.01,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\integracao\03-contrato-dados.test.js:28:7
+✖ CT-07 [contrato] Armadilha de arredondamento: 1.005 x 3 (half-up) (8.8328ms)
+  AssertionError [ERR_ASSERTION]: total
+  
+  3.01 !== 3.02
+  
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 3.01,
+    expected: 3.02,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
